@@ -1,3 +1,2 @@
-/home/tobias/.screenlayout/LaptopBare.sh
-feh --bg-scale Bakgrunner/wallpaper-3.jpg
-betterlockscreen -u Bakgrunner/wallpaper-5.jpg
+/home/tobias/.screenlayout/BareLaptop.sh
+feh --bg-scale ~/Bakgrunner/005.jpeg
