@@ -5,6 +5,7 @@ yay -S htop kitty network-manager-applet lxsession dmenu trayer yad git zip feh 
                  rm -rf ~/.config/xmobar && \
                  rm -rf ~/.config/dunst && \
                  rm -rf ~/.config/gtk-3.0 && \
+                 rm -rf ~/Bakgrunner && \
                  git clone https://github.com/TobbeBob123/.xmonad.git ~/.xmonad && \
                  git clone https://github.com/TobbeBob123/xmobar.git ~/.config/xmobar && \
                  git clone https://github.com/TobbeBob123/kitty.git ~/.config/kitty && \
@@ -14,7 +15,7 @@ yay -S htop kitty network-manager-applet lxsession dmenu trayer yad git zip feh 
                  sudo mv ~/.config/gtk-3.0/Dracula /usr/share/themes/Dracula && \
                  feh --bg-scale ~/Bakgrunner/Arch_Dracula.png && \
                  xmonad --recompile && \
-                 echo "Gratulerer! Du har nå installert TobbeOS"
+                 echo "Gratulerer! Du har nå installert TobbeOS" && \
                  echo "TIPS. Hvis du trenger å se keybinds. Se keybinds med Alt+h.
                                   
                  
