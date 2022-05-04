@@ -1,10 +1,12 @@
-sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib paru-bin xmobar kakoune xorg xf86-video-intel && \
-paru -S htop kitty network-manager-applet lxsession dmenu trayer yad git zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice pulseaudio picom pcmanfm && \
+sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xf86-video-intel && \
+sudo rm -rf yay-git ~/yay-git
+git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && \
+yay -S htop kitty network-manager-applet lxsession dmenu trayer yad git zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice pulseaudio picom pcmanfm && \
                  rm -rf ~/.xmonad && \
                  rm -rf ~/.config/kitty && \
                  rm -rf ~/.config/xmobar && \
                  rm -rf ~/.config/dunst && \
-                 rm -rf ~/.config/gtk-3.0 && \
+                 sudo rm -rf ~/.config/gtk-3.0 && \
                  rm -rf ~/Bakgrunner && \
                  git clone https://github.com/TobbeBob123/.xmonad.git ~/.xmonad && \
                  git clone https://github.com/TobbeBob123/xmobar.git ~/.config/xmobar && \
