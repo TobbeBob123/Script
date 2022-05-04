@@ -4,6 +4,7 @@ yay -S htop kitty network-manager-applet lxsession dmenu trayer yad git zip feh 
                  rm -rf ~/.config/kitty && \
                  rm -rf ~/.config/xmobar && \
                  rm -rf ~/.config/dunst && \
+                 rm -rf ~/.config/gtk-3.0 && \
                  git clone https://github.com/TobbeBob123/.xmonad.git ~/.xmonad && \
                  git clone https://github.com/TobbeBob123/xmobar.git ~/.config/xmobar && \
                  git clone https://github.com/TobbeBob123/kitty.git ~/.config/kitty && \
