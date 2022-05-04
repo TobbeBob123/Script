@@ -1,5 +1,5 @@
-sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib yay xmobar && \
-yay -S htop kitty  dmenu trayer yad git zip feh scrot dunst pavucontrol nm-connection-editor kakoune vim libreoffice lux pulseaudio picom pcmanfm && \
+sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib yay xmobar kakoune && \
+yay -S htop kitty  dmenu trayer yad git zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice lux pulseaudio picom pcmanfm && \
                  rm -rf ~/.xmonad && \
                  rm -rf ~/.config/kitty && \
                  rm -rf ~/.config/xmobar && \
