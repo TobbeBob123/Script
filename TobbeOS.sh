@@ -16,6 +16,4 @@ yay -S htop kitty network-manager-applet lxsession dmenu trayer yad git zip feh 
                  feh --bg-scale ~/Bakgrunner/Arch_Dracula.png && \
                  xmonad --recompile && \
                  echo "Gratulerer! Du har nå installert TobbeOS" && \
-                 echo "TIPS. Hvis du trenger å se keybinds. Se keybinds med Alt+h.
-                                  
-                 
+                 echo "TIPS. Hvis du trenger å se keybinds. Se keybinds med Alt+h."
