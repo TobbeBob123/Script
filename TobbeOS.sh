@@ -1,11 +1,10 @@
 echo "Du er i ferd med å overskrive xinit filen (.xinitrc). Vi anbefaler å ta bakup av innholdet av xinit filen."
-echo -n  "Vil du fortsette? [J/n]: "
+echo -n  "Vil du fortsette? [Y/n]: "
 read svar
 if [[ $svar == "n" ]] || [[ $svar == "N" ]]
 then
     exit
-elif [[ $svar == "j" ]] || [[ $svar == "J" ]]
-then
+else
     sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xorg-xinit xf86-video-intel && \
     sudo rm -rf yay-git ~/yay-git && \
     git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
