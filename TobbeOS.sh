@@ -14,6 +14,7 @@ yay -S htop kitty network-manager-applet lxsession dmenu lux-git trayer yad git 
                  sudo rm -rf ~/lightdm && \
                  sudo rm -rf /etc/systemd/system/display-manager.service && \
                  sudo rm -rf /etc/systemd/system/sleep.target.wants && \
+                 rm -rf ~/.xinitrc
                  git clone https://github.com/TobbeBob123/.xmonad.git ~/.xmonad && \
                  git clone https://github.com/TobbeBob123/xmobar.git ~/.config/xmobar && \
                  git clone https://github.com/TobbeBob123/kitty.git ~/.config/kitty && \
