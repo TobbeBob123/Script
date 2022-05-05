@@ -8,7 +8,7 @@ else
     sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xorg-xinit fish starship xf86-video-intel && \
     sudo rm -rf yay-git ~/yay-git && \
     git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
-    yay -S htop kitty network-manager-applet xautolock lxsession dmenu lux-git trayer yad git lightdm lightdm-gtk-greeter zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux thunderbird pulseaudio picom pcmanfm && \
+    yay -S htop kitty network-manager-applet xautolock lxsession dmenu exa lux-git trayer yad git lightdm lightdm-gtk-greeter zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux thunderbird pulseaudio picom pcmanfm && \
                  rm -rf ~/.config/fish && \
                  rm -f ~/.fehbg && \
                  rm -rf ~/starship && \
