@@ -1,4 +1,4 @@
-sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xf86-video-intel && \
+sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xorg-xinit xf86-video-intel && \
 sudo rm -rf yay-git ~/yay-git && \
 git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
 yay -S htop kitty network-manager-applet lxsession dmenu lux-git trayer yad git lightdm lightdm-gtk-greeter zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice pulseaudio picom pcmanfm && \
@@ -26,6 +26,7 @@ yay -S htop kitty network-manager-applet lxsession dmenu lux-git trayer yad git 
                  sudo mv ~/lightdm /etc/lightdm && \
                  sudo mv ~/.config/gtk-3.0/Dracula /usr/share/themes/Dracula && \
                  feh --bg-scale ~/Bakgrunner/Arch_Dracula.png && \
+                 touch ~/.xinitrc | echo exec xmonad > ~/.xinitrc && \
                  xmonad --recompile && \
                  echo "Gratulerer! Du har nå installert TobbeOS" && \
                  echo "TIPS. Hvis du trenger å se keybinds. Se keybinds med Alt+h."
