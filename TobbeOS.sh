@@ -1,7 +1,15 @@
-sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xorg-xinit xf86-video-intel && \
-sudo rm -rf yay-git ~/yay-git && \
-git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
-yay -S htop kitty network-manager-applet lxsession dmenu lux-git trayer yad git lightdm lightdm-gtk-greeter zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice pulseaudio picom pcmanfm && \
+echo "Du er i ferd med å overskrive xinit filen (.xinitrc). Vi anbefaler å ta bakup av innholdet av xinit filen."
+echo -n  "Vil du fortsette? [J/n]: "
+read svar
+if [[ $svar == "n" ]] || [[ $svar == "N" ]]
+then
+    exit
+elif [[ $svar == "j" ]] || [[ $svar == "J" ]]
+then
+    sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xorg-xinit xf86-video-intel && \
+    sudo rm -rf yay-git ~/yay-git && \
+    git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
+    yay -S htop kitty network-manager-applet lxsession dmenu lux-git trayer yad git lightdm lightdm-gtk-greeter zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice pulseaudio picom pcmanfm && \
                  rm -rf ~/.xmonad && \
                  rm -rf ~/.config/kitty && \
                  rm -rf ~/.config/xmobar && \
@@ -31,3 +39,4 @@ yay -S htop kitty network-manager-applet lxsession dmenu lux-git trayer yad git 
                  xmonad --recompile && \
                  echo "Gratulerer! Du har nå installert TobbeOS" && \
                  echo "TIPS. Hvis du trenger å se keybinds. Se keybinds med Alt+h."
+fi
