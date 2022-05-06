@@ -72,6 +72,9 @@ else
                  rm -rf ~/vim && \
                  # Her dras fish shell config til TobbeBob123
                  git clone https://github.com/TobbeBob123/Fish.git ~/.config/fish && \
+                 git clone https://github.com/oh-my-fish/oh-my-fish ~/omf && \
+                 cd /~omf && \
+                 bin/install --offline \
                  # Her settes fish til hoved shell
                  chsh -s /usr/bin/fish && \
                  # Her dras starship prompt config til TobbeBob123
