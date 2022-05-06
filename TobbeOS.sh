@@ -48,6 +48,10 @@ else
                  git clone https://github.com/TobbeBob123/Bakgrunner.git ~/Bakgrunner && \
                  # Her dras dracula theme til TobbeBob123
                  git clone https://github.com/TobbeBob123/Dracula_tema.git ~/.config/gtk-3.0 && \
+                 rm ~/.config/gtk-2.0
+                 mkdir ~/.config/gtk-2.0
+                 cp ~/.config/gtk-3.0/setting.ini ~/.gtkrc-2.0 && \
+                 cp ~/.config/gtk-3.0/setting.ini ~/.config/gtk-2.0/setting.ini && \
                  # Her dras picom config fra github
                  git clone https://github.com/TobbeBob123/picom.git ~/.config/picom && \
                  # Her dras surf config til TobbeBob123
@@ -84,8 +88,6 @@ else
                  sudo mv ~/lightdm /etc/lightdm && \
                  # Her flyttes tema til riktig sted for å aktivere tema
                  sudo mv ~/.config/gtk-3.0/Dracula /usr/share/themes/Dracula && \
-                 cp ~/.config/gtk-3.0/setting.ini ~/.gtkrc-2.0 && \
-                 cp ~/.config/gtk-3.0/setting.ini ~/.config/gtk-2.0/setting.ini && \
                  # Her lages fil for å huske bakgrunnen og denne filen blir henta opp i xmonad config (~/.xmonad/xmonad.hs
                  touch ~/.fehbg | echo "feh --no-fehbg --bg-scale ~/Bakgrunner/Arch_Dracula.png" > ~/.fehbg && \
                  # Her lages en fil som lar brukeren bruke startx for å starte xmonad
