@@ -28,7 +28,9 @@ else
                  rm -rf ~/.config/xmobar && \
                  rm -rf ~/.config/dunst && \
                  rm -rf ~/.gtkrc-2.0 && \
-                 sudo rm -rf ~/.config/gtk-3.0 && \
+                 rm -rf ~/.config/gtk-3.0 && \
+                 rm -rf ~/.config/gtk-2.0 && \
+                 sudo rm -rf /usr/share/gtk-2.0/gtkrc
                  rm -rf ~/Bakgrunner && \
                  sudo rm -rf /usr/share/themes && \
                  sudo mkdir /usr/share/themes && \
@@ -50,8 +52,9 @@ else
                  git clone https://github.com/TobbeBob123/Dracula_tema.git ~/.config/gtk-3.0 && \
                  rm ~/.config/gtk-2.0
                  mkdir ~/.config/gtk-2.0
-                 cp ~/.config/gtk-3.0/setting.ini ~/.gtkrc-2.0 && \
-                 cp ~/.config/gtk-3.0/setting.ini ~/.config/gtk-2.0/setting.ini && \
+                 cp ~/.config/gtk-3.0/settings.ini ~/.gtkrc-2.0 && \
+                 cp ~/.config/gtk-3.0/settings.ini ~/.config/gtk-2.0/settings.ini && \
+                 sudo mv ~/.config/gtk-3.0/gtkrc /usr/share/gtk-2.0/gtkrc
                  # Her dras picom config fra github
                  git clone https://github.com/TobbeBob123/picom.git ~/.config/picom && \
                  # Her dras surf config til TobbeBob123
