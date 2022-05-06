@@ -50,7 +50,6 @@ else
                  git clone https://github.com/TobbeBob123/Bakgrunner.git ~/Bakgrunner && \
                  # Her dras dracula theme til TobbeBob123
                  git clone https://github.com/TobbeBob123/Dracula_tema.git ~/.config/gtk-3.0 && \
-                 rm ~/.config/gtk-2.0
                  mkdir ~/.config/gtk-2.0
                  cp ~/.config/gtk-3.0/settings.ini ~/.gtkrc-2.0 && \
                  cp ~/.config/gtk-3.0/settings.ini ~/.config/gtk-2.0/settings.ini && \
