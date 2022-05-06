@@ -82,8 +82,6 @@ else
                  sudo mv ~/.config/gtk-3.0/Dracula /usr/share/themes/Dracula && \
                  # Her lages fil for å huske bakgrunnen og denne filen blir henta opp i xmonad config (~/.xmonad/xmonad.hs
                  touch ~/.fehbg | echo "feh --no-fehbg --bg-scale ~/Bakgrunner/Arch_Dracula.png" > ~/.fehbg && \
-                 # Her settes bakgrunn
-                 feh --bg-scale ~/Bakgrunner/Arch_Dracula.png && \
                  # Her lages en fil som lar brukeren bruke startx for å starte xmonad
                  touch ~/.xinitrc | echo exec xmonad > ~/.xinitrc && \
                  # Her recompiles xmonad som tar i mot alt scriptet har gjort
