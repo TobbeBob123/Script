@@ -12,7 +12,7 @@ else
     sudo rm -rf yay-git ~/yay-git && \
     git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
     # Her lastes ned resten av programmene
-    yay -S htop kitty network-manager-applet xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux thunderbird pulseaudio picom pcmanfm && \
+    yay -S htop kitty network-manager-applet paru-bin color-shell-script adobe-source-code-pro-fonts xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux thunderbird pulseaudio picom pcmanfm && \
                  # Her fjerner jeg mapper og filer som kan føre til error
                  rm -rf ~/.config/fish && \
                  rm -f ~/.fehbg && \
@@ -33,6 +33,7 @@ else
                  sudo mkdir /usr/share/themes && \
                  sudo rm -rf /etc/lightdm && \
                  sudo rm -rf ~/lightdm && \
+                 rm -rf ~/.config/picom && \
                  sudo rm -rf /etc/systemd/system/display-manager.service && \
                  sudo rm -rf /etc/systemd/system/sleep.target.wants && \
                  rm -rf ~/.xinitrc && \
@@ -46,6 +47,8 @@ else
                  git clone https://github.com/TobbeBob123/Bakgrunner.git ~/Bakgrunner && \
                  # Her dras dracula theme til TobbeBob123
                  git clone https://github.com/TobbeBob123/Dracula_tema.git ~/.config/gtk-3.0 && \
+                 # Her dras picom config fra github
+                 git clone https://github.com/TobbeBob123/picom.git ~/.config/picom && \
                  # Her dras surf config til TobbeBob123
                  git clone https://github.com/TobbeBob123/Surf.git ~/.config/surf && \
                  # Her dras source koden for surf browser til TobbeBob123
