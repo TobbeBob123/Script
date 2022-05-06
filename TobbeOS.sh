@@ -27,6 +27,7 @@ else
                  rm -rf ~/.config/kitty && \
                  rm -rf ~/.config/xmobar && \
                  rm -rf ~/.config/dunst && \
+                 rm -rf ~/.gtkrc-2.0 && \
                  sudo rm -rf ~/.config/gtk-3.0 && \
                  rm -rf ~/Bakgrunner && \
                  sudo rm -rf /usr/share/themes && \
@@ -83,6 +84,8 @@ else
                  sudo mv ~/lightdm /etc/lightdm && \
                  # Her flyttes tema til riktig sted for å aktivere tema
                  sudo mv ~/.config/gtk-3.0/Dracula /usr/share/themes/Dracula && \
+                 cp ~/.config/gtk-3.0/setting.ini ~/.gtkrc-2.0 && \
+                 cp ~/.config/gtk-3.0/setting.ini ~/.config/gtk-2.0/setting.ini && \
                  # Her lages fil for å huske bakgrunnen og denne filen blir henta opp i xmonad config (~/.xmonad/xmonad.hs
                  touch ~/.fehbg | echo "feh --no-fehbg --bg-scale ~/Bakgrunner/Arch_Dracula.png" > ~/.fehbg && \
                  # Her lages en fil som lar brukeren bruke startx for å starte xmonad
