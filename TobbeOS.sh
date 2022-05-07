@@ -99,6 +99,8 @@ else
                  touch ~/.fehbg | echo "feh --no-fehbg --bg-scale ~/Bakgrunner/Arch_Dracula.png" > ~/.fehbg && \
                  # Her lages en fil som lar brukeren bruke startx for å starte xmonad
                  touch ~/.xinitrc | echo exec xmonad > ~/.xinitrc && \
+                 # cd til hjemmeområdet
+                 cd /home/tobias && \
                  # Her recompiles xmonad som tar i mot alt scriptet har gjort
                  xmonad --recompile && \
                  # Laster ned omf som brukes av fish
