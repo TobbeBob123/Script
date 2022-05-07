@@ -6,17 +6,22 @@ if [[ $svar == "n" ]] || [[ $svar == "N" ]]
 then
     exit
 else
+    # Setter doas istedenfor sudo
+    touch ~/doas.conf | echo permit :wheel > ~/doas.conf && sudo chown root:root ~/doas.conf && \
+    sudo mv ~/doas.conf /etc/doas.conf && \
     # Oppgraderer og syncer databasene og installerer grunn pakkene for scriptet
     sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xorg-xinit fish starship xf86-video-intel && \
     # installerer/bygger AUR hjelper for å laste ned resten av programmene
     sudo rm -rf yay-git ~/yay-git && \
     git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
     # Her lastes ned resten av programmene
-    yay -S htop kitty network-manager-applet paru-bin adobe-source-code-pro-fonts xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux thunderbird pulseaudio picom pcmanfm && \
+    yay -S htop kitty network-manager-applet paru-bin adobe-source-code-pro-fonts doas xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux thunderbird pulseaudio picom pcmanfm && \
                  # Her fjerner jeg mapper og filer som kan føre til error
                  rm -rf ~/.config/fish && \
                  rm -f ~/.fehbg && \
                  rm -rf ~/.config/kak && \
+                 rm -rf ~/omf
+                 rm -rf ~/oh-my-fish
                  rm -rf ~/vim && \
                  rm -f ~/.vimrc && \
                  rm -rf ~/starship && \
@@ -50,10 +55,10 @@ else
                  git clone https://github.com/TobbeBob123/Bakgrunner.git ~/Bakgrunner && \
                  # Her dras dracula theme til TobbeBob123
                  git clone https://github.com/TobbeBob123/Dracula_tema.git ~/.config/gtk-3.0 && \
-                 mkdir ~/.config/gtk-2.0
+                 mkdir ~/.config/gtk-2.0 && \
                  cp ~/.config/gtk-3.0/settings.ini ~/.gtkrc-2.0 && \
                  cp ~/.config/gtk-3.0/settings.ini ~/.config/gtk-2.0/settings.ini && \
-                 sudo mv ~/.config/gtk-3.0/gtkrc /usr/share/gtk-2.0/gtkrc
+                 sudo mv ~/.config/gtk-3.0/gtkrc /usr/share/gtk-2.0/gtkrc && \
                  # Her dras picom config fra github
                  git clone https://github.com/TobbeBob123/picom.git ~/.config/picom && \
                  # Her dras surf config til TobbeBob123
@@ -72,9 +77,6 @@ else
                  rm -rf ~/vim && \
                  # Her dras fish shell config til TobbeBob123
                  git clone https://github.com/TobbeBob123/Fish.git ~/.config/fish && \
-                 git clone https://github.com/oh-my-fish/oh-my-fish ~/omf && \
-                 cd /~omf && \
-                 bin/install --offline \
                  # Her settes fish til hoved shell
                  chsh -s /usr/bin/fish && \
                  # Her dras starship prompt config til TobbeBob123
@@ -82,7 +84,7 @@ else
                  # Her flyttes starship config til riktig sted
                  mv ~/starship/starship.toml ~/.config/starship.toml && \
                  # Her slettes git mappa til starship
-                 rm -rf ~/starship
+                 rm -rf ~/starship && \
                  # Her dras lightdm config til TobbeBob123
                  git clone https://github.com/TobbeBob123/lightdm.git ~/lightdm && \
                  # Her flyttes service til riktig sted for å kunne enable display manager med sudo systemctl enable display-manager
@@ -99,8 +101,7 @@ else
                  touch ~/.xinitrc | echo exec xmonad > ~/.xinitrc && \
                  # Her recompiles xmonad som tar i mot alt scriptet har gjort
                  xmonad --recompile && \
-                 # Avsluttende beskjeder
-                 echo "Gratulerer! Du har nå installert TobbeOS" && \
-                 echo "TIPS. Hvis du trenger å se keybinds. Se keybinds med Alt+h."
+                 # Laster ned omf som brukes av fish
+                 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish \
 # Avslutter hele if statement
 fi
