@@ -102,6 +102,10 @@ else
                  # Her recompiles xmonad som tar i mot alt scriptet har gjort
                  xmonad --recompile && \
                  # Laster ned omf som brukes av fish
-                 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish \
+                 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish && \
+                 # Avsluttende beskjed
+                 echo "Du har nå installert TobbeOS" && \
+                 echo "Tips: Trykk Alt+h for å se keybinds" && \
+                 echo "Reboot for å komme inn i TobbeOS"
 # Avslutter hele if statement
 fi
