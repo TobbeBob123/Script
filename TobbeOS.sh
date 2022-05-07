@@ -10,7 +10,7 @@ else
     touch ~/doas.conf | echo permit :wheel > ~/doas.conf && sudo chown root:root ~/doas.conf && \
     sudo mv ~/doas.conf /etc/doas.conf && \
     # Oppgraderer og syncer databasene og installerer grunn pakkene for scriptet
-    sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xorg-xinit fish starship xf86-video-intel && \
+    sudo pacman -Sy && sudo pacman -Syu && sudo pacman -S xmonad xmonad-contrib xmobar kakoune xorg xorg-xinit fish starship lib32-mesa && \
     # installerer/bygger AUR hjelper for å laste ned resten av programmene
     sudo rm -rf yay-git ~/yay-git && \
     git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
