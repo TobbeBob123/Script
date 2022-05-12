@@ -16,7 +16,7 @@ else
     sudo rm -rf yay-git ~/yay-git && \
     git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
     # Her lastes ned resten av programmene
-    yay -S htop kitty xdotool dracula-icons-git vifm network-manager-applet paru-bin adobe-source-code-pro-fonts pacman-contrib doas xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter light-locker zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux thunderbird pulseaudio picom pcmanfm && \
+    yay -S htop kitty rofi xdotool dracula-icons-git vifm network-manager-applet paru-bin adobe-source-code-pro-fonts pacman-contrib doas xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter light-locker zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux thunderbird pulseaudio picom pcmanfm && \
                  # Her fjerner jeg mapper og filer som kan føre til error
                  rm -rf ~/.config/fish && \
                  rm -f ~/.fehbg && \
@@ -47,6 +47,7 @@ else
                  sudo rm -rf /etc/systemd/system/sleep.target.wants && \
                  rm -rf ~/.xinitrc && \
                  rm -rf ~/.config/vifm && \
+		 rm -rf ~/.config/rofi && \
                  # Her dras xmonad config til TobbeBob123
                  git clone https://github.com/TobbeBob123/.xmonad.git ~/.xmonad && \
                  # Her dras xmobar config til TobbeBob123
@@ -99,8 +100,9 @@ else
                  sudo mv ~/.config/gtk-3.0/Dracula /usr/share/themes/Dracula && \
                  # Her dras config til vifm (Terminal based filemanager) med dracula tema
                  git clone https://github.com/TobbeBob123/vifm.git ~/.config/vifm && \
-                 # Her flyttes service til riktig sted for å kunne enable display manager med sudo systemctl enable display-manager
-                 # Her lages fil for å huske bakgrunnen og denne filen blir henta opp i xmonad config (~/.xmonad/xmonad.hs
+                 # Her hentes rofi (program launcher) config fra git.
+                 git clone https://github.com/TobbeBob123/Rofi.git ~/.config/rofi && \
+                 # Her lages fil for å huske bakgrunnen og denne filen blir henta opp i xmonad config (~/.xmonad/xmonad.hs)
                  touch ~/.fehbg | echo "feh --no-fehbg --bg-scale ~/Bakgrunner/Arch_Dracula.png" > ~/.fehbg && \
                  # Her lages en fil som lar brukeren bruke startx for å starte xmonad
                  touch ~/.xinitrc | echo exec xmonad > ~/.xinitrc && \
