@@ -48,6 +48,7 @@ else
                  rm -rf ~/.xinitrc && \
                  rm -rf ~/.config/vifm && \
 		 rm -rf ~/.config/rofi && \
+		 rm -rf  ~/.vim/pack/plugins/start/lightline && \
                  # Her dras xmonad config til TobbeBob123
                  git clone https://github.com/TobbeBob123/.xmonad.git ~/.xmonad && \
                  # Her dras xmobar config til TobbeBob123
@@ -76,6 +77,7 @@ else
                  git clone https://github.com/TobbeBob123/kak.git ~/.config/kak && \
                  # Her dras vim config til TobbeBob123
                  git clone https://github.com/TobbeBob123/vim.git ~/vim && \
+		 git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline && \
                  mv ~/vim/.vimrc ~/.vimrc && \
                  rm -rf ~/vim && \
                  # Her dras fish shell config til TobbeBob123
