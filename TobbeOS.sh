@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Gir brukeren en mulighet til å avslutte scriptet hvis brukeren har ombestemt seg med if statment + vil ta bakup av xinit filen
 echo "Du er i ferd med å overskrive xinit filen (.xinitrc). Vi anbefaler å ta bakup av innholdet av xinit filen."
 echo "Du burde kjøre fjernPakker.sh før du går videre"
