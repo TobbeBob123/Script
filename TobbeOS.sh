@@ -23,8 +23,8 @@ else
                  rm -rf ~/.config/fish && \
                  rm -f ~/.fehbg && \
                  rm -rf ~/.config/kak && \
-                 rm -rf ~/omf
-                 rm -rf ~/oh-my-fish
+                 rm -rf ~/omf && \
+                 rm -rf ~/oh-my-fish && \
                  rm -rf ~/vim && \
                  rm -f ~/.vimrc && \
                  rm -rf ~/starship && \
@@ -38,7 +38,7 @@ else
                  rm -rf ~/.gtkrc-2.0 && \
                  rm -rf ~/.config/gtk-3.0 && \
                  rm -rf ~/.config/gtk-2.0 && \
-                 sudo rm -rf /usr/share/gtk-2.0/gtkrc
+                 sudo rm -rf /usr/share/gtk-2.0/gtkrc && \
                  rm -rf ~/Bakgrunner && \
                  sudo rm -rf /usr/share/themes && \
                  sudo mkdir /usr/share/themes && \
