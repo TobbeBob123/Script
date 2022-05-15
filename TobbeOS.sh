@@ -18,7 +18,7 @@ else
     sudo rm -rf yay-git ~/yay-git && \
     git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
     # Her lastes ned resten av programmene
-    yay -S htop kitty rofi xdotool dracula-gtk-theme dracula-icons-git vifm network-manager-applet paru-bin adobe-source-code-pro-fonts pacman-contrib doas xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter light-locker zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux thunderbird pulseaudio picom pcmanfm && \
+    yay -S htop kitty mailspring gnome-keyring rofi xdotool dracula-gtk-theme dracula-icons-git vifm network-manager-applet paru-bin adobe-source-code-pro-fonts pacman-contrib doas xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter light-locker zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux pulseaudio picom pcmanfm && \
                  # Her fjerner jeg mapper og filer som kan føre til error
                  rm -rf ~/.config/fish && \
                  rm -f ~/.fehbg && \
