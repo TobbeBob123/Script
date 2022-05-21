@@ -16,6 +16,5 @@ I want to run TobbeOS.sh, so my command will be:
 $ ./TobbeOS.sh
 the script is now running.
 
-See http://direct.lysakermoen.com:8000/s/XmonadDracula+Xmobar/preview Screenshot for TobbeOS or see the Picture under:
 ![TobbeOS rice](https://github.com/TobbeBob123/.xmonad/blob/master/NyTobbeOS_skjermdump.png?raw=true)
 
