@@ -16,5 +16,5 @@ I want to run TobbeOS.sh, so my command will be:
 $ ./TobbeOS.sh
 the script is now running.
 
-![TobbeOS rice](https://github.com/TobbeBob123/.xmonad/blob/master/NyTobbeOS_skjermdump.png?raw=true)
+[TobbeOS](https://github.com/TobbeBob123/.xmonad/blob/master/NyTobbeOS_skjermdump.png?raw=true)
 
