@@ -72,6 +72,8 @@ else
                  git clone https://github.com/TobbeBob123/Surf-browser.git ~/surf && \
                  # Her bygges surf
                  cd ~/surf && sudo make install && \
+		 # Flytter brukeren tilbake til ~
+		 cd ~ && \
                  # Her dras dunst config til TobbeBob123
                  git clone https://github.com/TobbeBob123/dunst.git ~/.config/dunst && \
                  # Her dras kak config til TobbeBob123
