@@ -87,7 +87,7 @@ else
                  git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d && \
                  ~/.emacs.d/bin/doom install
                  rm -rf ~/.doom.d
-                 git clone https://github.com/TobbeBob123/doom_emacs.git ~/doom.d
+                 git clone https://github.com/TobbeBob123/doom_emacs.git ~/.doom.d
                  ~/.emacs.d/bin/doom sync
                  # Her dras fish shell config til TobbeBob123
                  git clone https://github.com/TobbeBob123/Fish.git ~/.config/fish && \
