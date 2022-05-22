@@ -80,6 +80,9 @@ else
                  git clone https://github.com/TobbeBob123/kak.git ~/.config/kak && \
                  # Her dras neovim config til TobbeBob123
                  git clone https://github.com/TobbeBob123/nvim.git ~/.config/nvim && \
+		 # Her installerer jeg lightline i nvim
+                 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+                https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' && \
                  # Her dras fish shell config til TobbeBob123
                  git clone https://github.com/TobbeBob123/Fish.git ~/.config/fish && \
                  # Her settes fish til hoved shell
