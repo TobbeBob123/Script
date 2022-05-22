@@ -18,15 +18,13 @@ else
     sudo rm -rf yay-git ~/yay-git && \
     git clone https://aur.archlinux.org/yay-git.git ~/yay-git && cd ~/yay-git && makepkg -si && cd && rm -rf yay-git && \
     # Her lastes ned resten av programmene
-    yay -S htop kitty geary gnome-keyring rofi ttf-font-awesome-4 noto-fonts-emoji xdotool dracula-gtk-theme dracula-icons-git vifm network-manager-applet paru-bin adobe-source-code-pro-fonts pacman-contrib doas xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter light-locker zip feh scrot dunst pavucontrol nm-connection-editor vim libreoffice librewolf-bin signal-desktop teams-for-linux pulseaudio picom pcmanfm && \
+    yay -S htop kitty geary gnome-keyring rofi ttf-font-awesome-4 noto-fonts-emoji xdotool dracula-gtk-theme dracula-icons-git vifm network-manager-applet paru-bin adobe-source-code-pro-fonts pacman-contrib doas xautolock nodejs-lts-fermium lxsession dmenu exa lux-git trayer yad git jre-openjdk lightdm lightdm-gtk-greeter light-locker zip feh scrot dunst pavucontrol nm-connection-editor neovim libreoffice librewolf-bin signal-desktop teams-for-linux pulseaudio picom pcmanfm && \
                  # Her fjerner jeg mapper og filer som kan føre til error
                  rm -rf ~/.config/fish && \
                  rm -f ~/.fehbg && \
                  rm -rf ~/.config/kak && \
                  rm -rf ~/omf && \
                  rm -rf ~/oh-my-fish && \
-                 rm -rf ~/vim && \
-                 rm -f ~/.vimrc && \
                  rm -rf ~/starship && \
                  rm -rf ~/.config/surf && \
                  rm -rf ~/surf && \
@@ -50,7 +48,7 @@ else
                  rm -rf ~/.xinitrc && \
                  rm -rf ~/.config/vifm && \
 		 rm -rf ~/.config/rofi && \
-		 rm -rf  ~/.vim/pack/plugins/start/lightline && \
+		 rm -rf ~/.config/nvim && \
 		 sudo rm -rf /usr/share/themes/Dracula && \
                  # Her dras xmonad config til TobbeBob123
                  git clone https://github.com/TobbeBob123/.xmonad.git ~/.xmonad && \
@@ -78,11 +76,8 @@ else
                  git clone https://github.com/TobbeBob123/dunst.git ~/.config/dunst && \
                  # Her dras kak config til TobbeBob123
                  git clone https://github.com/TobbeBob123/kak.git ~/.config/kak && \
-                 # Her dras vim config til TobbeBob123
-                 git clone https://github.com/TobbeBob123/vim.git ~/vim && \
-		 git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline && \
-                 mv ~/vim/.vimrc ~/.vimrc && \
-                 rm -rf ~/vim && \
+                 # Her dras neovim config til TobbeBob123
+                 git clone https://github.com/TobbeBob123/nvim.git ~/.config/nvim && \
                  # Her dras fish shell config til TobbeBob123
                  git clone https://github.com/TobbeBob123/Fish.git ~/.config/fish && \
                  # Her settes fish til hoved shell
